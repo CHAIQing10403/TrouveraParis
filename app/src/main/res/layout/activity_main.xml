@@ -1,0 +1,53 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--用于显示fragment的控件，能够实现左右滑动显示页面-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tab_divider" />
+
+
+        <!--这里是当TabHost的内容不是用ViewPager显示，
+            而是单独设置每个Tab对应一个content的时候的布局，
+            ⚠️：但是就算不使用也必须有该FrameLayout，可以不用理会 -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tab_divider"
+            android:visibility="gone">
+        </FrameLayout>
+
+        <!-- View是Tab与上面ViewPager的分割线-->
+        <View
+            android:id="@+id/tab_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@android:id/tabs"
+            android:background="#dfdfdf" />
+
+        <!--用于放置图标icon和文件的控件-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:showDividers="none">
+            <!--showDividers设置是否显示分割线-->
+        </TabWidget>
+
+    </RelativeLayout>
+
+</TabHost>

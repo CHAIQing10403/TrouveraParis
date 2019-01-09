@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FindSomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_title">
+
+        <ImageView
+            android:id="@+id/img_find_me"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/txt_me"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_find_me" />
+
+        <TextView
+            android:id="@+id/txt_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="18dp"
+            android:text="Me"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerInParent="true"
+            android:gravity="center|bottom"
+            android:text="Find Someone"
+            android:textColor="@color/color_title_txt"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/btn_add_invitation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_add"
+            android:backgroundTint="#ffffff" />
+
+
+    </RelativeLayout>
+
+    <!--里面包含里主要内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <!--每个Item的布局-->
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--第三方圆形头像框-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img_head3" />
+
+            <!--加号的按钮-->
+            <Button
+                android:id="@+id/btn_add1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_add" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="5dp">
+
+            <!--显示icon的控件-->
+            <ImageView
+                android:id="@+id/ic_user"
+                android:layout_width="23dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:tint="#797878" />
+
+            <!--显示名字的控件-->
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_user"
+                android:text="Fred"
+                android:textSize="17sp" />
+
+            <!--显示icon的控件-->
+            <ImageView
+                android:id="@+id/ic_dao"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/ic_user"
+                android:src="@drawable/ic_dao"
+                android:tint="#797878" />
+
+            <!--显示餐厅的名字-->
+            <TextView
+                android:id="@+id/txt_res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_dao"
+                android:text="Big Panda" />
+
+            <!--显示自我介绍-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ic_dao"
+                android:layout_marginTop="7dp"
+                android:text="Hi,this is Fred,I want to eat Big Panda, a Chinese restaurant, anyone with me?" />
+
+            <!--显示时间-->
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ic_more"
+                android:text="Lunch-Today" />
+
+            <!--右边的三个点的icon-->
+            <ImageView
+                android:id="@+id/ic_more"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bababa" />
+
+
+    <!--同上-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img_head1" />
+
+            <Button
+                android:id="@+id/btn_add2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_add" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/ic_user2"
+                android:layout_width="23dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:tint="#797878" />
+
+            <TextView
+                android:id="@+id/txt_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_user2"
+                android:text="CHEN"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/ic_dao2"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/ic_user2"
+                android:src="@drawable/ic_dao"
+                android:tint="#797878" />
+
+            <TextView
+                android:id="@+id/txt_res2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_dao2"
+                android:text="KFC" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ic_dao2"
+                android:layout_marginTop="7dp"
+                android:text="I am having LOT course right now. There is no time for dinner after class, so I have no choice..." />
+
+            <TextView
+                android:id="@+id/txt_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ic_more2"
+                android:text="Dinner-Tomorrow" />
+
+            <ImageView
+                android:id="@+id/ic_more2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bababa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img_head4" />
+
+            <Button
+                android:id="@+id/btn_add3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_add" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/ic_user3"
+                android:layout_width="23dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:tint="#797878" />
+
+            <TextView
+                android:id="@+id/txt_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_user3"
+                android:text="Jacky"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/ic_dao3"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/ic_user3"
+                android:src="@drawable/ic_dao"
+                android:tint="#797878" />
+
+            <TextView
+                android:id="@+id/txt_res3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name3"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_dao3"
+                android:text="Leon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ic_dao3"
+                android:layout_marginTop="7dp"
+                android:text="I love seafood!! But I can't eat so much by myself. So is there anyone can go with me?" />
+
+            <TextView
+                android:id="@+id/txt_time3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ic_more3"
+                android:text="Dinner-Friday" />
+
+            <ImageView
+                android:id="@+id/ic_more3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bababa" />
+
+    <LinearLayout
+        android:id="@+id/layout_last"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:visibility="gone">
+
+        <!--每个Item的布局-->
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--第三方圆形头像框-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img_head3" />
+
+            <!--加号的按钮-->
+            <Button
+                android:id="@+id/btn_add4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_add" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="5dp">
+
+            <!--显示icon的控件-->
+            <ImageView
+                android:id="@+id/ic_user4"
+                android:layout_width="23dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:tint="#797878" />
+
+            <!--显示名字的控件-->
+            <TextView
+                android:id="@+id/txt_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_user4"
+                android:text="Fred"
+                android:textSize="17sp" />
+
+            <!--显示icon的控件-->
+            <ImageView
+                android:id="@+id/ic_dao4"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/ic_user4"
+                android:src="@drawable/ic_dao"
+                android:tint="#797878" />
+
+            <!--显示餐厅的名字-->
+            <TextView
+                android:id="@+id/txt_res4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name4"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ic_dao4"
+                android:text="Big Panda" />
+
+            <!--显示自我介绍-->
+            <TextView
+                android:id="@+id/txt_content4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ic_dao4"
+                android:layout_marginTop="7dp"
+                android:text="Hi,this is Fred,I want to eat Big Panda, a Chinese restaurant, anyone with me?" />
+
+            <!--显示时间-->
+            <TextView
+                android:id="@+id/txt_time4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ic_more4"
+                android:text="Lunch-Today" />
+
+            <!--右边的三个点的icon-->
+            <ImageView
+                android:id="@+id/ic_more4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

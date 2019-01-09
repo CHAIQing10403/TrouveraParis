@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="375dp"
+    android:layout_height="330dp"
+    android:orientation="vertical"
+    android:background="#bfcecdcd"
+    android:gravity="center">
+
+    <!--卡片堆叠的布局，由一张照片和底下一行字构成-->
+    <ImageView
+        android:id="@+id/img_picture"
+        android:layout_width="360dp"
+        android:layout_height="300dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Le Pavillon de la Tourelle"
+        android:textColor="#000000"
+        android:textSize="23sp" />
+</LinearLayout>

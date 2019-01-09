@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakeDecisionActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_title"
+            android:gravity="center|bottom"
+            android:text="Make Decision"
+            android:textColor="@color/color_title_txt"
+            android:textSize="28sp" />
+
+        <!--每个item的布局-->
+        <LinearLayout
+            android:id="@+id/ad1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <!--左侧的图片-->
+            <ImageView
+                android:id="@+id/ad1_img"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/game1" />
+
+            <!--文字-->
+            <LinearLayout
+                android:id="@+id/text_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't know what to eat ?"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ad1_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Let's make it easy !"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--同上-->
+        <LinearLayout
+            android:id="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ad1"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ad_img"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/game2" />
+
+            <LinearLayout
+                android:id="@+id/text2_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play to choose a restaurant randomly."
+                    android:textSize="21sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--转盘，第三方控件-->
+        <com.fred.trouverparis.Lucky
+            android:id="@+id/id_luckypan"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ad"
+            android:layout_centerInParent="true"
+            android:padding="30dp" />
+
+        <!--显示暂停和开始的控件-->
+        <ImageView
+            android:id="@+id/id_start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="330dp"
+            android:src="@drawable/start_btn" />
+
+
+    </RelativeLayout>
+</LinearLayout>

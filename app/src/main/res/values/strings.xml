@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Trouver à Paris</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="around_me">Around Me</string>
+</resources>
